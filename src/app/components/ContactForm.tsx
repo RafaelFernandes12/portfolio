@@ -2,11 +2,15 @@
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import Link from "next/link";
+import { useState } from "react";
 
 export default function ContactForm() {
 
+  const [isSent, setIsSent] = useState(true);
+
   async function handleSubmit(e:any) {
     e.preventDefault();
+    setIsSent((prevOpen) => !prevOpen);
     const response = await fetch("https://api.web3forms.com/submit", {
       method: "POST",
       headers: {
@@ -44,27 +48,34 @@ export default function ContactForm() {
             </Link>
           </div>
         </div>
-        <form onSubmit={handleSubmit} 
-          className=" flex items-center gap-4 flex-col font-sans my-7 w-1/2 max-sm:w-full">
-          <input type="text" name="name" required placeholder="Nome:"
-            className="p-3 pl-12 rounded-xl mt-4 text-black bg-gray-200 placeholder:text-gray-400 bg-user
+        {
+          isSent  ? 
+            <form onSubmit={handleSubmit} 
+              className=" flex items-center gap-4 flex-col font-sans my-7 w-1/2 max-sm:w-full">
+              <input type="text" name="name" required placeholder="Nome:"
+                className="p-3 pl-12 rounded-xl mt-4 text-black bg-gray-200 placeholder:text-gray-400 bg-user
               bg-no-repeat bg-[center_left_1rem] w-3/4 max-sm:w-full"
-          />
-          <input type="text" name="phone" required placeholder="Nome:"
-            className="p-3 pl-12 rounded-xl mt-4 text-black bg-gray-200 placeholder:text-gray-400 bg-phone
+              />
+              <input type="text" name="phone" required placeholder="Nome:"
+                className="p-3 pl-12 rounded-xl mt-4 text-black bg-gray-200 placeholder:text-gray-400 bg-phone
               bg-no-repeat bg-[center_left_1rem] w-3/4 max-sm:w-full"
-          />
-          <input type="email" name="email" required placeholder="Email:" 
-            className="p-3 pl-12 rounded-xl mt-4 text-black bg-gray-200 placeholder:text-gray-400 w-3/4 max-sm:w-full
+              />
+              <input type="email" name="email" required placeholder="Email:" 
+                className="p-3 pl-12 rounded-xl mt-4 text-black bg-gray-200 placeholder:text-gray-400 w-3/4 max-sm:w-full
               bg-email bg-no-repeat bg-[center_left_1rem]"
-          />
-          <textarea name="message" required rows={3} placeholder="Mensagem:"
-            className="p-3 rounded-xl mt-4 text-black bg-gray-200 placeholder:text-gray-400 w-3/4 max-sm:w-full"
-          />
-          <button type="submit"
-            className="w-3/4 max-sm:w-full bg-[#311b46] p-4 mt-2 rounded-2xl border-prettyPink border-[1px] hover:bg-prettyPurple"
-          >Enviar</button>
-        </form>
+              />
+              <textarea name="message" required rows={3} placeholder="Mensagem:"
+                className="p-3 rounded-xl mt-4 text-black bg-gray-200 placeholder:text-gray-400 w-3/4 max-sm:w-full"
+              />
+              <button type="submit"
+                className="w-3/4 max-sm:w-full bg-[#311b46] p-4 mt-2 rounded-2xl border-prettyPink border-[1px] hover:bg-prettyPurple"
+              >Enviar</button>
+            </form> 
+            : 
+            <div className="w-1/2 h-[434px] flex items-center justify-center max-sm:h-24">
+              <p className="">Email enviado com sucesso!</p>
+            </div>
+        }
       </div>
     </section>
   );

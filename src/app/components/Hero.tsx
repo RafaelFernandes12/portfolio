@@ -8,6 +8,7 @@ export default function Hero(){
   return(
     <div className="h-full w-full mb-36 max-sm:mb-10">
       <div className="flex items-center justify-between max-sm:flex-col max-sm:justify-center">
+        <Image src={hero} alt='' className="w-1/3 h-auto max-sm:w-1/2 sm:hidden"/>
         <div className="flex flex-col justify-around h-[360px]">
           <div>
             <p className="text-5xl max-md:text-2xl">Eu sou</p>
@@ -44,7 +45,7 @@ export default function Hero(){
             </Link>
           </div>
         </div>
-        <Image src={hero} alt='' className="w-1/3 h-auto max-sm:w-1/2"/>
+        <Image src={hero} alt='' className="w-1/3 h-auto max-sm:hidden"/>
       </div>
     </div>
   );
