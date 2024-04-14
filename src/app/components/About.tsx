@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import { useState } from "react";
 
-const skills = ["JavaScript","NextJs","NodeJs","Fastify","Git"];
+const skills = ["JavaScript","NextJs","NodeJs","Fastify","Git","Firebase","Python"];
 const education = ["Técnico em Informática para Internet pelo IFRN","Graduação em Tecnologia da Informação pela UFRN"];
 const variants = {
   default: { width: 0 },
