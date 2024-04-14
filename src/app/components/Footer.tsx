@@ -1,5 +1,3 @@
-import GitHubIcon from "@mui/icons-material/GitHub";
-import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import Link from "next/link";
 export default function Footer() {
   return (
@@ -12,25 +10,10 @@ export default function Footer() {
             <span className="border-b-[1px] border-prettyYellow hover:border-b-0">Rafael Fernandes</span>
           </Link>
         </div>
-        <div className="flex flex-col mt-6">
-          <span className="font-semibold">Social</span>
-          <div className="flex">
-            <Link href="https://github.com/RafaelFernandes12">
-              <span className="border-b-[1px] border-prettyYellow hover:border-b-0">Github|</span>
-            </Link>
-            <Link href="https://www.linkedin.com/in/rafaelfernandes-7aba69221/">
-              <span className="border-b-[1px] border-prettyYellow hover:border-b-0">Linkedin</span>
-            </Link>
-          </div>
-        </div>
+
       </div>
       <div className="flex mt-6 gap-2">
-        <Link href="https://github.com/RafaelFernandes12">
-          <GitHubIcon />
-        </Link>
-        <Link href="https://www.linkedin.com/in/rafaelfernandes-7aba69221/">
-          <LinkedInIcon />
-        </Link>
+        <p>Todos os direitos reservados <br/> a Rafael Fernandes</p>
       </div>
     </div>
   );

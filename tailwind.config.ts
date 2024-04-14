@@ -39,11 +39,12 @@ const config: Config = {
         ptSerif: ["PT Serif", "serif"]
       },
       backgroundImage: {
-        "cpsi": "url('../assets/cellCPSI.png')",
-        "lyricsLogo": "url('../assets/lyricsLogo.png')",
-        "joguinho_f": "url('../assets/joguinho_f.png')",
-        "user": "url('../assets/user.svg')",
-        "email": "url('../assets/email.svg')",
+        "cpsi": "url('/cellCPSI.png')",
+        "lyricsLogo": "url('/lyricsLogo.png')",
+        "joguinho_f": "url('/joguinho_f.png')",
+        "user": "url('/user.svg')",
+        "email": "url('/email.svg')",
+        "phone": "url('/phone.svg')",
       }
     },
   },

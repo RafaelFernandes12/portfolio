@@ -16,8 +16,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="max-w-[1000px] m-auto mt-16 bg-[#13032a] bg-[url('../assets/stars.gif')] 
-      text-prettyYellow font-merriWeather font-semibold">
+      <body className="max-w-[1440px] m-auto mt-16 bg-[#13032a] bg-[url('../assets/stars.gif')] 
+      text-prettyYellow font-merriWeather font-semibold max-md:text-base max-2xl:px-10">
         <Header />
         {children}
         <Footer />
