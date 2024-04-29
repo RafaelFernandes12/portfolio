@@ -18,7 +18,7 @@ export default function Home() {
             text="O CPSIWeb é um projeto que tem como objetivo organizar os alunos e cursos 
             cadastrados no projeto da terceira idade oferecido pela IFRN."
             gitUrl="https://github.com/RafaelFernandes12/terceira_idade"
-            previewUrl="/"
+            previewUrl="https://terceira-idade.vercel.app/"
           />
           <Card 
             bg="/lyricsLogo.png"

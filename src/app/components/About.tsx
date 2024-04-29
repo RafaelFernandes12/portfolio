@@ -32,7 +32,7 @@ export default function About(){
 
           <div className="flex gap-6 text-xl ">
             <button onClick={() => handleList("skills")}
-              className="hover:text-prettyPink"
+              className=""
             >
               Habilidades
               <motion.div
@@ -43,7 +43,7 @@ export default function About(){
             </button>
 
             <button onClick={() => handleList("education")}
-              className="hover:text-prettyPink">
+              className="">
               Formação
               <motion.div
                 animate={option === "education" ? "active" : "default"}
