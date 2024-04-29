@@ -3,12 +3,12 @@ import CloseIcon from "@mui/icons-material/Close";
 import MenuIcon from "@mui/icons-material/Menu";
 import Link from "next/link";
 import { useState } from "react";
+
 export function MenuOverlay(){
   const [open, setOpen] = useState(false);
 
   const toggleMenu = () => {
     setOpen((prevOpen) => !prevOpen);
-    console.log(open);
   };
 
   return(
